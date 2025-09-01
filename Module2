@@ -1,0 +1,20 @@
+# Module # 2 Assignment Importing Data and Function Evaluation in R for LIS 4370
+# Jadyn Hollar
+
+assignment2 <- c(16, 18, 14, 22, 27, 17, 19, 17, 17, 22, 20, 22)
+
+myMean <- function(assignment2) {
+  return(sum(assignment) / length(someData))
+}
+myMean(assignment2)
+
+# This code returned an error "Error in myMean(assignment2) : object 'someData' not found" 
+# This function failed because the variables "assignment" and "someData" are not defined which means that the program can not compute an answer.
+# A corrected version of this to determine the mean of the data set would be the following:
+
+assignment2 <- c(16, 18, 14, 22, 27, 17, 19, 17, 17, 22, 20, 22)
+
+myMean <- function(assignment2) {
+  return(sum(assignment2) / length(assignment2))
+}
+myMean(assignment2)
