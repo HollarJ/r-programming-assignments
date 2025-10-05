@@ -1,0 +1,24 @@
+# Blog link: https://hollarjadyn2.wordpress.com/2025/10/05/assignment-6-matrix-operations-and-construction/
+# Module 6: Matrix Operations and Construction for LIS 4370
+# Author: Jadyn Hollar
+
+# Matrix Addition & Subtraction
+
+A <- matrix(c(2, 0, 1, 3), ncol = 2)
+B <- matrix(c(5, 2, 4, -1), ncol = 2)
+Sum <- A + B
+Difference <- A - B
+Sum
+Difference
+
+# Create a Diagonal Matrix
+D <- diag(c(4, 1, 2, 3))
+D
+
+# Construct a Custom 5×5 Matrix
+
+matrix1 <- diag(c(3, 3, 3, 3,3))
+matrix1[1, 2:5] <- 1
+matrix1[2:5, 1] <- 2
+matrix1
+
