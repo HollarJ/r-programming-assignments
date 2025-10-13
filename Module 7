@@ -1,14 +1,1 @@
-# Module #7 Assignment: Visualizing Distributions in R for LIS 4317
-# Author: Jadyn Hollar
 
-data(mtcars)
-library(ggplot2)
-plot <- ggplot(mtcars, aes(x = mpg)) +
-  geom_histogram(aes(fill = factor(cyl))) +
-  labs(
-    title = "Miles per Gallon vs cyl",
-    x = "Miles per Gallon",
-    y = "Count of cars",
-    fill = "Cylinders"
-  )
-plot
