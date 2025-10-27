@@ -1,0 +1,45 @@
+# Assignment #9: Visualization in R – Base Graphics, Lattice, and ggplot2 for LIS4370
+# Author: Jadyn Hollar
+
+data(mtcars)
+head(mtcars)
+
+# Base R
+# Scatter plot
+plot(mtcars$hp, mtcars$mpg,
+     main   = "Base: hp vs. mpg",
+     xlab   = "Horsepower",
+     ylab   = "Miles per Gallon")
+
+# Histogram
+hist(mtcars$mpg,
+     main   = "Base: Distribution of mpg",
+     xlab   = "Miles per Gallon")
+
+# Lattice
+library(lattice)
+# Conditional scatter plot (small multiples)
+xyplot(mpg ~ hp | factor(cyl),
+       data = mtcars,
+       main = "Lattice: mpg vs. hp by cyl")
+
+# Box-and-whisker plot
+bwplot(mpg ~ factor(cyl),
+       data = mtcars,
+       main = "Lattice: mpg by cyl")
+
+# ggplot2
+library(ggplot2)
+
+# Scatter plot with smoothing
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "ggplot2: mpg vs. hp with trend")
+
+# Faceted histogram
+ggplot(mtcars, aes(mpg)) +
+  geom_histogram(binwidth = 2) +
+  facet_wrap(~ cyl) +
+  labs(title = "ggplot2: mpg distribution by cyl")
+
